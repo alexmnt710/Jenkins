@@ -11,8 +11,9 @@ COPY index.js .
 # Instalar dependencias
 RUN npm install
 
-# Copiar el resto de los archivos
-COPY user.json .
+# Copiar el resto de los archivos (archivo de datos de usuarios)
+# En el proyecto el archivo se llama `users.json`, no `user.json`.
+COPY users.json .
 
 # Exponer el puerto de la aplicación
 EXPOSE 3000
